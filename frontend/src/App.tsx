@@ -1,11 +1,13 @@
 import React, { FunctionComponent } from 'react';
 import './App.css';
-import { AffinityAbilityAnalysis } from './component/affinity-ability-analysis/affinityAbilityAnalysis';
-
+import Scatter from './component/affinity-ability-analysis/scatter';
+import { DataProvider } from './context/data.context';
 export const App: FunctionComponent = () => {
 	return (
-		<div className="my-app">
-			<AffinityAbilityAnalysis data={[ 1, 2, 3 ]} />
-		</div>
+		<DataProvider>
+			<div className="container-fluid mw-1200 py-4 px-5">
+				<Scatter />
+			</div>
+		</DataProvider>
 	);
 };

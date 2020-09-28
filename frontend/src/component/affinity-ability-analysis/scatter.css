@@ -1,0 +1,30 @@
+.data-circle{
+    cursor: pointer;
+}
+
+.data-circle:hover {
+    fill: orange;
+}
+
+foreignObject{
+    background-color: rgba(50, 50, 50, 0.8);
+    font-size: x-small;
+    border-radius: '4px';
+    padding: '10px';
+    border: '0';
+}
+
+.tooltip-title{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tooltip-content{
+    color: white;
+}
+
+.label-text{
+    font-size: 14px;
+    font-weight: bold;
+}
