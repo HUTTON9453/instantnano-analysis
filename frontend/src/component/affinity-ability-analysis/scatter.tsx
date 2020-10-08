@@ -39,7 +39,7 @@ const defaultKDAxis = [7,8,9,10,11,12]
 function Scatter() {
 	const [showTooltip, setShowTooltip] = useState<{data:Data, show:Boolean}>({data:{kd:0,ka:0,KD:0, group:'default'},show:false});
 	const [ color, setColor] = useState("#000000");
-	const { data, insertData, updateData } = useContext(DataContext);
+	const { data, insertData, updateData, setData } = useContext(DataContext);
 	const [ ka, setka] = useState(0);
 	const [ kd, setkd] = useState(0);
 	const [ KD, setKD] = useState(0);
@@ -62,7 +62,9 @@ function Scatter() {
 
 	const handleDownload = () => {
 		toImg('svg', 'INB IN-Ab Analysis Report_Example').then(fileData => {
+			const temp = data;
 			window.location.reload(false);
+			setData(temp);
 		  });
 	}
 
