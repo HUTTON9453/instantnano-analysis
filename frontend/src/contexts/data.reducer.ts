@@ -15,6 +15,7 @@ export const DataReducer = (state, action) => {
             };
         case 'UPDATE':
             const newData = action.payload as Data;
+            console.log(newData)
             const updatedData = state.data.map((data: Data) => {
                 if (data.ka === newData.ka
                     && data.kd === newData.kd) {

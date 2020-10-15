@@ -1,10 +1,7 @@
 import React from "react";
 import { ValueToUnit } from "../../utils/valueToUnit";
 
-function AxisKD({ xScale, yScale, width, height, tickArr}) {
-    const textPadding = 10;
-    const labelPadding = 35;
-
+function AxisKD({ xScale, yScale, width, tickArr}) {
     const KDlabel =<text className='label-text' transform={`translate(${width-50},-20)`}>K <tspan baselineShift="-30%">D</tspan></text>
     const arrYScale = yScale.ticks(5);
     const arrAbsYScale = yScale.ticks(5).map((d,i)=>(Math.abs(d)));

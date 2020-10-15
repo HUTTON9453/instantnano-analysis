@@ -1,6 +1,6 @@
 import React from "react";
 
-function Legend({ groups, colors, width }) {
+function Legend({ groups, width }) {
     const lengendPadding = 20;
     const lengendColorPadding = 140;
     const lengendTextPadding = 160;
@@ -10,7 +10,7 @@ function Legend({ groups, colors, width }) {
             r={5}
             cx={width+lengendColorPadding}
             cy={70+i*lengendPadding}
-            fill={colors[i]}
+            fill={group.color}
         />
         <text
             style={{ fontSize: 12 }}
@@ -18,7 +18,7 @@ function Legend({ groups, colors, width }) {
             dy=".32em"
             y={70+i*lengendPadding}
         >
-            {group}
+            {group.name}
         </text>
         </g>
     ));

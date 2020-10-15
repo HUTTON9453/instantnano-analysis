@@ -1,13 +1,16 @@
 import React, { FunctionComponent } from 'react';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import './App.css';
-import Scatter from './component/affinity-ability-analysis/scatter';
-import { DataProvider } from './context/data.context';
+import Scatter from './components/affinity-ability-analysis/scatter';
+import { DataProvider } from './contexts/data.context';
+import { SettingProvider } from './contexts/setting.context';
 export const App: FunctionComponent = () => {
 	return (
-		<DataProvider>
-			<div className="container-fluid mw-1200 py-4 px-5">
-				<Scatter />
-			</div>
-		</DataProvider>
+	<Router>
+		<Switch>
+		  <Route exact path="/" render={()=><SettingProvider><DataProvider><Scatter /></DataProvider></SettingProvider>} />
+		</Switch>
+	</Router>
+		
 	);
 };

@@ -8,7 +8,7 @@ function AxisBottom({ xScale, width, height }) {
   const axis = xScale.ticks(7).map((d, i) => (
     <g className="x-tick" key={i}>
       <line
-        style={{ stroke: "#000000" }}
+        style={{ stroke: "#000000", opacity: i===0 || i===xScale.ticks(7).length-1? 1: 0.1  }}
         y1={0}
         y2={height}
         x1={xScale(d)}
