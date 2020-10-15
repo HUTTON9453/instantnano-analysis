@@ -35,7 +35,7 @@ export const AffinityInsertDataModal: FunctionComponent<AffinityInsertDataProps>
 				</DialogContentText>
 				<div className="row">
 					<div className="col-3">
-						<TextField label="ka" variant="outlined" onChange={(event)=>{ curData.ka = event.target.value as unknown as number; setCurData(curData); }}/>
+						<TextField autoFocus label="ka" variant="outlined" onChange={(event)=>{ curData.ka = event.target.value as unknown as number; setCurData(curData); }}/>
 					</div>
 					<div className="col-3">
                         <TextField label="kd" variant="outlined" onChange={(event)=>{ curData.kd = event.target.value as unknown as number; setCurData(curData); }}/>
