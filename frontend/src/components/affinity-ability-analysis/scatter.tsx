@@ -63,10 +63,10 @@ function Scatter() {
     .range(allGroups.map((group)=>group.color))
 	//const xMinAndMax =extent<number>(data.map((d:Data)=>{return Math.log(d.kd)/Math.log(10)}))
 	//const xDomain=[xMinAndMax[0]!, xMinAndMax[1]!]
-	const xDomain = setting.kaTick
+	const xDomain = setting.kdTick
 	//const yMinAndMax =extent<number>(data.map((d:Data)=>{return Math.log(d.ka)/Math.log(10)}))
 	//const yDomain=[yMinAndMax[0]!, yMinAndMax[1]!]
-	const yDomain = setting.kdTick
+	const yDomain = setting.kaTick
 	const width = w - margin.right - margin.left,
 		height = h - margin.top - margin.bottom;
 	const xScale = scaleLinear().domain(xDomain).range([ 0, width ]);
