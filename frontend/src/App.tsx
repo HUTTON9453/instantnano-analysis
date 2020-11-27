@@ -1,11 +1,18 @@
 import React, { FunctionComponent } from 'react';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import './App.css';
-import { AffinityAbilityAnalysis } from './component/affinity-ability-analysis/affinityAbilityAnalysis';
-
+import Scatter from './components/affinity-ability-analysis/scatter';
+import { Header } from './components/header/header';
+import { DataProvider } from './contexts/data.context';
+import { SettingProvider } from './contexts/setting.context';
 export const App: FunctionComponent = () => {
 	return (
-		<div className="my-app">
-			<AffinityAbilityAnalysis data={[ 1, 2, 3 ]} />
-		</div>
+	<Router>
+	<Header />
+		<Switch>
+		  <Route exact path="/" render={()=><SettingProvider><DataProvider><Scatter /></DataProvider></SettingProvider>} />
+		</Switch>
+	</Router>
 	);
+	
 };
