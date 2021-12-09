@@ -32,8 +32,8 @@ export const Header: FunctionComponent = () => {
 							to={routes.HOME}
 							replace
 						>
-							<img className="mx-2" width="50" height="50" src={process.env.PUBLIC_URL + "other_pic.png"} alt="Logo" />
-							Home
+							<img className="mx-2"  height="50" src={process.env.PUBLIC_URL + "Instant Logo_White.png"} alt="Logo" />
+							IN-Ab Affinity Distribution
 						</Link>
 					</NavItem>
 				</Nav>

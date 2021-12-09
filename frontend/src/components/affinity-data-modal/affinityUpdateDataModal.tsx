@@ -25,6 +25,15 @@ export const AffinityUpdateDataModal: FunctionComponent<AffinityUpdateDataProps>
 		updateData(props.data);
 		props.onClose();
 	}
+	const handleKa = (event)=>{
+		props.data.ka=event.target.value as unknown as number;
+	}
+	const handleKd = (event)=>{
+		props.data.kd=event.target.value as unknown as number;
+	}
+	const handleKD = (event)=>{
+		props.data.KD=event.target.value as unknown as number;
+	}
 	const handleGroup = (event)=>{
 		props.data.group.name=event.target.value as unknown as string;
 	}
@@ -41,13 +50,13 @@ export const AffinityUpdateDataModal: FunctionComponent<AffinityUpdateDataProps>
 				</DialogContentText>
 				<div className="row">
 					<div className="col-3">
-						<TextField label="ka" variant="outlined" defaultValue={props.data.ka} disabled/>
+						<TextField label="ka" variant="outlined" defaultValue={props.data.ka}  onChange={handleKa}/>
 					</div>
 					<div className="col-3">
-                        <TextField label="kd" variant="outlined" defaultValue={props.data.kd} disabled/>
+                        <TextField label="kd" variant="outlined" defaultValue={props.data.kd}   onChange={handleKd}/>
 					</div>
 					<div className="col-3">
-                        <TextField label="KD" variant="outlined" defaultValue={props.data.KD} disabled/>
+                        <TextField label="KD" variant="outlined" defaultValue={props.data.KD}   onChange={handleKD}/>
 					</div>
 					
                 </div>
